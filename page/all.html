@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div id='content' class="container-fluid">
+    <div class="row">
+        <h1 style="text-align: center;color: pink">文章归档</h1>
+        <div class="indexp">
+            {% for post in site.posts limit:1000 %}
+            <div class="contentline"><div>
+                <div class="caption">
+                    {{ post.date | date:"%Y/%m/%d"}}
+                    <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+                    <span style="float: right">
+                    {% for cat in post.categories %}
+                    <a style="margin-right: 5px;font-size: smaller" href="https://hunterhug.github.io/blog/page/category?cat={{cat}}">{{cat}}</a>
+                    {% endfor %}
+                    |
+                    {% for tag in post.tags %}
+                    <a style="margin-right: 5px;font-size: smaller" href="https://hunterhug.github.io/blog/page/tag?cat={{tag}}">{{tag}}</a>
+                    {% endfor %}
+                    </span>
+
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

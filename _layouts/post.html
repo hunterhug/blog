@@ -1,0 +1,82 @@
+---
+layout: blog
+---
+<div class="container-fluid" id="content">
+    <div>
+        <div class="post indexp" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+
+            <p class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
+                </time>
+                {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+                    itemprop="name">{{ page.author }}</span></span>{% endif %}
+                 {% for tag in page.tags %}
+                  • <span><a href="{{ 'https://hunterhug.github.io/blog/page/tag.html?cat=' | prepend: site.baseurl }}{{tag}}">{{tag}}</a></span>
+                 {% endfor %}
+            </p>
+
+        </header>
+        <div class="post-content" itemprop="articleBody">
+            {% if page.author %}
+            <div class="copyright">版权所有，转载请注明：<a href="{{ site.domain }}{{ page.permalink }}">{{ site.domain }}{{ page.permalink }}</a></div>
+            {% else %}
+            <div class="copyright">版权所有，转载请注明：<a href="{{ site.domain }}">{{ site.domain }}</a></div>
+            {% endif %}
+            {{ content }}
+            {% if page.author %}
+            <div class="copyright">版权所有，转载请注明：<a href="{{ site.domain }}{{ page.permalink }}">{{ site.domain }}{{ page.permalink }}</a></div>
+            {% else %}
+            <div class="copyright">版权所有，转载请注明：<a href="{{ site.domain }}">{{ site.domain }}</a></div>
+            {% endif %}
+            
+<!--            <hr>-->
+<!--                <div class="pagination" style="width: 100%;">-->
+<!--                <ul>-->
+<!--                    {% if page.previous %}-->
+<!--                        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a></li>-->
+<!--                    {% else %}-->
+<!--                        <li class="prev disabled"><a>&larr; Previous</a></li>-->
+<!--                    {% endif %}-->
+<!--                    <li class="disabled"><a>☕️☕️☕️可以请我吃辣条吗☕️☕️☕️</a></li>-->
+<!--                </ul>-->
+<!--                <ul>-->
+<!--                    {% if page.next %}-->
+<!--                        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a></li>-->
+<!--                    {% else %}-->
+<!--                        <li class="next disabled"><a>Next &rarr;</a>-->
+<!--                    {% endif %}-->
+<!--                    <li class="disabled"><a>☕️☕️☕️可以请我吃辣条吗☕️☕️☕️</a></li>-->
+<!--                </ul>-->
+<!--                </div>-->
+<!--            <hr>-->
+
+        </div>
+        <div>
+            <p>
+		    <a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏下辣条，支持一下吧么么哒">赏辣条</a>
+	        </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="{{ 'https://hunterhug.github.io/blog/static/js/toc.js' | prepend: site.baseurl }}"></script>
+<div id="hidetoc">
+    <div id="toc" class="tocc"></div>
+</div>
+<script type="text/javascript">
+        $(function() {
+            $('#toc').toc({ 
+                noBackToTopLinks: true,
+                listType: 'ul',
+                showEffect: 'slideDown',
+                classes: { 
+                    list: 'nav nav-list',
+                    item: ''
+                }})
+        });
+</script>

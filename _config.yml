@@ -1,0 +1,50 @@
+# 网站的标题
+title: "阿星星的世界🌟-FaFa's World"
+
+# 你的邮箱
+email: oop
+
+# 知乎地址
+zhihu: https://www.zhihu.com/people/nozhihu
+zhihuname: "喜欢吹风的男人"
+
+# 网站SEO描述
+description:  "阿星星的世界-博文-技术记录-🌟"
+
+# 网站介绍
+about: "这个世界充满了无限可能，只要你愿意去探索，去挑战，你就能实现你的梦想。"
+
+# 首页喇叭
+roll: "在追寻梦想的路上，每一个努力都值得被赞扬。简单的激励，点燃你前行的火焰。"
+
+# 域名，保持下面两个一样
+url: https://hunterhug.github.io/blog
+domain: https://hunterhug.github.io/blog
+#url: http://127.0.0.1
+#domain: http://127.0.0.1
+domainbeian: "超人的备案"
+
+# 评论
+githubclientid: aafa3e0a94d93d12d6a3
+githubclientsecret: bcb248782a7da0044483e9e7412b0455e6ce6306
+githubrepo: blog-comment
+githubowner: hunterhug
+
+# 赞赏的二维码
+alipay: https://hunterhug.github.io/blog/static/pay/alipay.png
+wxpay: https://hunterhug.github.io/blog/static/pay/weixin.png
+#alipay: http://127.0.0.1/static/pay/alipay.png
+#wxpay: http://127.0.0.1/static/pay/weixin.png
+paytitle: "请给阿星星一点鼓励，支持超人写出更好的文章。"
+paydescription: "一分钱也是爱。"
+
+# 谷歌分析标志
+googletag: "UA-109725015-1"
+
+# 请保持不变
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude: ["README.md", "_fake"]
+permalink: /:categories/:title.html

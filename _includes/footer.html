@@ -1,0 +1,55 @@
+<div id='footer' class="container-fluid">
+    <div class="row">
+        <div class="span3">
+            <img class="zhuanzhuan" src="https://hunterhug.github.io/blog/static/me.gif" class="fimage">
+        </div>
+<!--        <div class="span3">-->
+<!--            <img class="zhuanzhuan" src="https://hunterhug.github.io/blog/static/public/b.jpeg" class="fimage">-->
+<!--        </div>-->
+        <div class="span3">
+            <img class="zhuanzhuan" src="https://hunterhug.github.io/blog/static/face.gif" class="fimage">
+        </div>
+    </div>
+    <div>
+        <div id="footerabout">
+<!--            <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>-->
+<!--            <p>我的知乎：<a href="{{ site.zhihu }}" target="_blank">{{ site.zhihuname }}</a></p>-->
+            <p><span id="htmer_time"></span></p>
+            <p>{{ site.about }}</p>
+<!--            <p><a target="_blank" href="https://analytics.google.com/analytics/web">Google Analytics</a></p>-->
+<!--           <p>在巴甫洛夫条件反射试验中：给定一条狗，每次摇铃后喂食，足够次数后，狗则听到铃声将会习惯性的分泌唾液，由此引发对铃声的依恋。延伸到实际，给定一个喜欢的妹子，每次见面赠与巴甫洛夫式的礼品或者零食，由此引发妹子的依恋。引入薛定谔的猫理论，在未表白前，妹子与自己一直处于一种“概率云”的状态，一旦表白则“概率云”将消失成为实际。在巴甫洛夫式未表白时，自己与妹子的关系为“既是恋人又不是恋人”的矛盾体。返回巴甫洛夫式试验中，在妹纸形成足够的依恋过后，则可以打破“概率云”的状态，这个谜一样的自己，这一刻薛定谔附体，带着量子论般深沉的哀愁，让她从此不能自拔! 自此创作巴甫洛夫把妹法和薛定谔把妹法，深藏功与名。 -&#45;&#45;转自百哥么么哒-->
+<!--            <p><a href="{{"/feed.xml" | prepend: site.baseurl }}">RSS</a>|<a href="https://analytics.google.com">谷歌分析</a></p>-->
+<!--	        <p>《周易》曰：天行健，君子以自强不息；地势坤，君子以厚德载物。 上句“天行健，君子以自强不息”流传更广。两句意谓：天（即自然）的运动刚强劲健，相应于此，君子处世，应像天一样，自我力求进步。刚毅坚卓，发奋图强，永不停息；大地的气势厚实和顺，君子应增厚美德，容载万物。 &#45;&#45; 转自孔子</p>-->
+<!--           <p>本网站已备案，备案号：<a href="https://beian.miit.gov.cn/">{{ site.domainbeian }}</a></p>-->
+       </div>
+    </div>
+</div>
+<div>
+    <a class="gototop1" title="返回顶部" target="_self" href="javascript:void(0)"></a>
+    <a class="gototop" title="返回顶部" target="_self" href="javascript:void(0)"></a>
+    <script type="text/javascript" src="https://hunterhug.github.io/blog/static/js/jquery.gototop.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".gototop").gototop({
+                position : 0,
+                duration : 1250,
+                visibleAt : 300,
+                classname : "isvisible"
+            });
+
+            $(".gototop1").gototop({
+                position : 0,
+                duration : 1250,
+                visibleAt : 300,
+                classname : "isvisible"
+            });
+        });
+    </script>
+</div>
+
+<style>
+    .zhuanzhuan img:hover{
+        transform: rotate(-120deg);
+        transform-origin: 95% 40% 0;
+    }
+</style>

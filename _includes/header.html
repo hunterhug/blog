@@ -1,0 +1,45 @@
+<!--<a class="v-fork-me" href="https://github.com/hunterhug" target="_blank" rel="nofollow">
+    <img src="https://hunterhug.github.io/blog/static/forkme_right_darkblue.png" alt="Find me on GitHub"></a>-->
+<div id='head'>
+    <div class="navbar  navbar-default navbar-fixed-top" >
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span
+                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a
+                    href="{{ site.domain }}" class="brand">{{ site.title }}</a>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" style="background: url('https://hunterhug.github.io/blog/static/jpg/newimg.png') no-repeat right top" href="#">超人读书时刻📖<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="page-link" href="https://hunterhug.github.io/china-history" target="_blank">中华二十四史💗</a></li>
+                                <li><a class="page-link" href="https://hunterhug.github.io/china-literary" target="_blank">中华四大名著🌈</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">超人带你踩坑🦟<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+                            {% for category in site.categories %}
+							<li><a class="page-link" href="{{ "https://hunterhug.github.io/blog/page/category.html?cat=" | prepend: site.baseurl }}{{ category | first }}">{{ category | first }}<span>-({{ category | last | size }})</span></a></li>
+							{% endfor %}
+                                <li><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">支持一下🥺</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">超人带你探索未知🔨<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="page-link" href="https://hunterhug.github.io/blog/page/about.html">超人是谁？👴</a></li>
+                                <li><a class="page-link" href="https://hunterhug.github.io/blog/page/cloud.html">超人的小工具⏰</a></li>
+                                <li><a class="page-link" href="https://github.com/hunterhug" target="_blank">超人的开源仓库🐱</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="background: url('https://hunterhug.github.io/blog/static/jpg/newimg.png') no-repeat right top" class="page-link navbar-brand" class="page-link" href="https://hunterhug.github.io/goa.c" target="_blank">数据结构和算法(Golang实现)</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        {% include links.html %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include dashang.html %}

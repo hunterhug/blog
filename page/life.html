@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<div id='content' class="container-fluid">
+    <div class="row">
+		<div class="indexp">
+			<marquee direction="right">{{ site.roll }}</marquee>
+		</div>
+        <div id="yy">
+        </div>
+    </div>
+</div>
+<script>
+        (function () {
+		var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"desc":"{{post.desc}}","url":"{{post.url | prepend: site.baseurl}}", "title":"{{post.title}}","tags":{{post.tags | jsonify}},"date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
+		data = JSON.parse(dataStr);
+		curTag = "生活"
+		archieves = data[curTag];
+		var k='';
+		for(i in archieves){
+			var aaa ="<div class='contentline'><div><p>";
+			aaa+=archieves[i]['date'];
+			aaa+="</p>"
+			if(archieves[i]["tags"]=="null"||archieves[i]["tags"]==""){
+
+			}else{
+				aaa+="<p>"
+				for (j in archieves[i]["tags"]){
+					aaa+="<a style='margin-right: 5px' href='/tag.html?cat="+archieves[i]["tags"][j]+"'>"+archieves[i]["tags"][j]+"<a/>"
+				}
+				aaa+="</p>"
+			}
+			aaa+="<div class='caption'><h3><p><a href = '";
+			aaa+=archieves[i]['url'];
+			aaa+="' > "+archieves[i]['title']+"</a></p><p>"+archieves[i]['desc']+"</p></h3></div></div></div>";
+			k+=aaa;
+		}
+		var div=document.getElementById("yy");
+        div.innerHTML=k;
+		})();
+</script>
