@@ -22,7 +22,7 @@ url: https://hunterhug.github.io/blog
 domain: https://hunterhug.github.io/blog
 #url: http://127.0.0.1
 #domain: http://127.0.0.1
-domainbeian: "超人的备案"
+domainbeian: "星星的备案"
 
 # 评论
 githubclientid: aafa3e0a94d93d12d6a3
@@ -35,7 +35,7 @@ alipay: https://hunterhug.github.io/blog/static/pay/alipay.png
 wxpay: https://hunterhug.github.io/blog/static/pay/weixin.png
 #alipay: http://127.0.0.1/static/pay/alipay.png
 #wxpay: http://127.0.0.1/static/pay/weixin.png
-paytitle: "请给阿星星一点鼓励，支持超人写出更好的文章。"
+paytitle: "请给阿星星一点鼓励，支持星星写出更好的文章。"
 paydescription: "一分钱也是爱。"
 
 # 谷歌分析标志

@@ -183,7 +183,7 @@ var fly = function(data,txt) {
 
   };
 
-var word = ["超人和你永相随","你爱超人吗","超人要去云南","超人爱你","超人电灯"]
+var word = ["星星和你永相随","你爱星星吗","星星要去云南","星星爱你","星星电灯"]
 var func = [hi,penguin,lol,fly]
 var funcimg = ["https://hunterhug.github.io/blog/static/hi.gif","https://hunterhug.github.io/blog/static/penguin.gif","https://hunterhug.github.io/blog/static/lol.gif","https://hunterhug.github.io/blog/static/fly.gif"]
 //var func = [hi,lol]
